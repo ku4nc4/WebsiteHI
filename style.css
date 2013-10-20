@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#ecf0f1;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#welcome
+{
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-40px;
+	margin-left:-165px;
+	width:330px;
+	height:80px;
+	color:#2ecc71;
+	text-align:center;
+	display:block;
+	line-height:90px;
+	z-index:0;
+	-webkit-transform:scale(0);
+	-webkit-opacity:0;
+	/*if user dont click the link*/
+	-webkit-animation-name:bounce-out;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-delay:2s; 
+	-webkit-animation-duration:2.2s;
+}
+
+#loading
+{
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-25px;
+	margin-left:-25px;
+	width:50px;
+	height:50px;
+	background-color:#344;
+	-webkit-transform:scale(0);
+	-webkit-animation-name:fly-in-rotate;
+	-webkit-animation-delay:3.4s;
+	-webkit-animation-duration:4s;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-fill-mode:forward;
+	border-radius: 15px;
+}
+
+#background
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:#3498db;
+	-webkit-animation:bounce-in;
+	-webkit-animation-delay:8.4s;
+	-webkit-animation-duration:1.5s;
+	-webkit-transform:scale(0);
+	-webkit-animation-fill-mode:forwards;
+}
+
+#land
+{
+	position:fixed;
+	width:50%;
+	height:50%;
+	margin-left:-25%;
+	margin-top:-12.5%;
+	background:url(images/pulau.png); 
+	top:50%;
+	left:50%;
+	background-color:#3498db;
+	-webkit-animation:bounce-in;
+	-webkit-animation-delay:8.4s;
+	-webkit-animation-duration:1.8s;
+	-webkit-transform:scale(0);
+	-webkit-animation-fill-mode:forwards;
+	background-size:100% 100%;
+}
+
+#wind_turbine
+
+{
+	width:100px;
+	height:150px;
+	background:#09C;
+	position:fixed;
+	left:70%;
+	top:30%;
+	margin-top:-75px;
+	margin-left:-50px;
+	border-radius:15px;
+	-webkit-transform:scale(0);
+	/*animation*/
+	-webkit-animation-name:bounce-in;
+	-webkit-animation-delay:8.4s;
+	-webkit-animation-duration:1.6s;
+	-webkit-animation-fill-mode:forwards;
+}
+
+
+#solar_cell
+{
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:5%;
+	height:10%;
+	background:#696;
+	margin-left:-2.5%;
+	border-radius:15px;
+	margin-top:-5%;
+	-webkit-transform:scale(0);
+	/*animation*/
+	-webkit-animation-name:bounce-in;
+	-webkit-animation-delay:8.4s;
+	-webkit-animation-duration:1.6s;
+	-webkit-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes bounce-out 
+{
+	0%		{-webkit-transform:scale(1.0) }
+	20%		{-webkit-transform:scale(0.1) }
+	40%		{-webkit-transform:scale(0.4) }
+	60% 	{-webkit-transform:scale(0.1) }
+	80%		{-webkit-transform:scale(0.2) }
+	100%	{-webkit-transform:scale(0)   }
+}
+
+@-webkit-keyframes bounce-in
+{
+	0%		{-webkit-transform:scale(0) 	}
+	20%		{-webkit-transform:scale(1.0)	}
+	40%		{-webkit-transform:scale(0.4)	}
+	60%		{-webkit-transform:scale(1.0)	}
+	80%		{-webkit-tannsform:scale(0.7)	}
+	100%	{-webkit-transform:scale(1.0)	}
+}
+
+@-webkit-keyframes bounce-in-ide
+{
+	0%		{-webkit-transform:scale(0) ; opacity:1; color:#09C	}
+	12.5%		{-webkit-transform:scale(3.0); opacity:0.8	;color:#996}
+	25%		{-webkit-transform:scale(1.0)	; opacity: 0.8; color:#CC9}
+	37.5%		{-webkit-transform:scale(4.0)	; opacity: 0.8; color:#CF6}
+	50%		{-webkit-tannsform:scale(2.0)	; opacity: 0.5; color:#F69}
+	62.5%		{-webkit-tannsform:scale(5.0)	; opacity: 0; color:#F3F}
+	80%		{-webkit-tannsform:scale(3.0)	; opacity: 0; color:#CFC}
+	100%	{-webkit-transform:scale(5.0)	; opacity:: 0; color:#F69}
+}
+
+@-webkit-keyframes fly-in-rotate
+{
+	0%		{-webkit-transform:rotate(0); opacity:0;}
+	1%		{-webkit-transform:scale(0deg)}
+	49%		{-webkit-transform:rotate(960deg)}
+	99%		{-webkit-transform:rotate(0deg); opacity:100}
+	100%	{-webkit-transform:scale(1.0); opacity:0; }
+}
